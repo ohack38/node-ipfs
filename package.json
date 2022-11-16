@@ -1,0 +1,24 @@
+{
+  "name": "ipfs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohack38/node-ipfs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohack38/node-ipfs/issues"
+  },
+  "homepage": "https://github.com/ohack38/node-ipfs#readme",
+  "dependencies": {
+    "ipfs-http-client": "^59.0.0"
+  }
+}
