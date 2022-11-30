@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ohack38/node-ipfs#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ipfs-http-client": "^59.0.0"
   }
 }
