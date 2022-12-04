@@ -18,11 +18,11 @@ async function ipfsClient() {
   return ipfs;
 }
 
-async function test() {
+async function addFile() {
   let ipfs = await ipfsClient();
 
   let { cid } = await ipfs.add('Hello World');
   console.log(cid);
 }
 
-test()
+addFile()
