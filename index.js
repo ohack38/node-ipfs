@@ -1,4 +1,5 @@
-import { create } from "ipfs-http-client";
+import { create } from 'ipfs-http-client';
+import fs from 'fs'
 import * as dotenv from 'dotenv' 
 dotenv.config()
 
@@ -18,11 +19,18 @@ async function ipfsClient() {
   return ipfs;
 }
 
-async function addFile() {
-  let ipfs = await ipfsClient();
 
-  let { cid } = await ipfs.add('Hello World');
-  console.log(cid);
+async function addFile(filePath) {
+  let ipfs = await ipfsClient();
+ 
+  const files = fs.readdirSync(filePath)
+  console.log(files)
+
+  for(let file of files) {
+    const buffer = fs.readFileSync(`${filePath}/${file}`)
+    const result = await ipfs.add(buffer)
+    console.log(result)
+  }
 }
 
-addFile()
+addFile('./img')
